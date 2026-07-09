@@ -3,8 +3,260 @@ import PropTypes from 'prop-types'
 import Newsitem from './Newsitem'
 
 export class News extends Component {
-  static propTypes = {
-
+  articles= [{
+            "source": {
+                "id": "fox-news",
+                "name": "Fox News"
+            },
+            "author": null,
+            "title": "Taylor Swift and Travis Kelce's wedding leaks snowball as guests reveal inside details - Fox News",
+            "description": "From the performances to the bouquet catch, guests keep spilling details from Taylor Swift and Travis Kelce's Madison Square Garden celebration.",
+            "url": "https://www.foxnews.com/entertainment/taylor-swift-travis-kelce-wedding-leaks-snowball-guests-reveal-inside-details",
+            "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2026/06/taylor-swift-travis-kelce-nyc.jpeg",
+            "publishedAt": "2026-07-07T12:00:12Z",
+            "content": "Taylor Swift and Travis Kelce's wedding guests can't stop spilling details from the couple's star-studded celebration.\r\nThe loose-lipped guests have revealed everything from Adam Sandler's marriage a… [+7736 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "Amalya Dubrovsky",
+            "title": "Stock market today: S&P 500, Nasdaq futures slip after Samsung results spark chip sell-off - Yahoo Finance UK",
+            "description": "US stock futures edged down on the heels of a record-setting day on Wall Street.",
+            "url": "https://finance.yahoo.com/markets/live/stock-market-today-sp-500-nasdaq-futures-slip-after-samsung-results-spark-chip-sell-off-223015294.html",
+            "urlToImage": "https://s.yimg.com/lo/mysterio/api/DEF6EF4B4523DC8C6E3860452A9FCF003F33D9D8C2B7EB9461B4E3DEB23790CC/subgraphmysterio/resizefill_w1200_h800;quality_80;format_webp/https:%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2F2026-06%2F1a520e3a-f85e-44e2-8764-da7f3d0f02fd",
+            "publishedAt": "2026-07-07T11:57:46Z",
+            "content": "US stock futures fell on Tuesday after Samsung's (016360.KS) quarterly results sparked renewed selling in chip stocks and oil prices edged higher.\r\nFutures attached to the Dow Jones Industrial Averag… [+1187 chars]"
+        },
+        {
+            "source": {
+                "id": "associated-press",
+                "name": "Associated Press"
+            },
+            "author": "Jon Gambrell",
+            "title": "Tanker set ablaze after being struck by projectile in the Strait of Hormuz as Iran mourns Khamenei - AP News",
+            "description": "A tanker traveling off the coast of Oman in the Strait of Hormuz has caught on fire after being struck by a projectile. The United Kingdom Maritime Trade Operations center said Tuesday that the tanker had been hit near Limah, Oman, in the strait. It said the …",
+            "url": "https://apnews.com/article/iran-us-israel-war-oil-4732228810c9839a1258309ad43b8289",
+            "urlToImage": "https://dims.apnews.com/dims4/default/9fe5533/2147483647/strip/true/crop/4822x3213+445+0/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fc5%2Fa7%2F0d433f7f87f17f52f8a6e21952c0%2F160a1287c83b4cdf88bd5f03196abdbe",
+            "publishedAt": "2026-07-07T11:37:00Z",
+            "content": "DUBAI, United Arab Emirates (AP) A tanker traveling off the coast of Oman in the Strait of Hormuz caught on fire early Tuesday morning after being struck by a projectile, the British military said.\r\n… [+4623 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "CNBC"
+            },
+            "author": "Diana Olick",
+            "title": "Far more real estate agents now report seeing a balanced market, CNBC Housing Market Survey finds - CNBC",
+            "description": "Agents who reported at least one price cut to active listings dropped dramatically from prior surveys.",
+            "url": "https://www.cnbc.com/2026/07/07/cnbc-housing-market-survey-balanced-market.html",
+            "urlToImage": "https://image.cnbcfm.com/api/v1/image/108251167-1768230337155-gettyimages-2255399287-FLORIDA_OPEN_HOUSES.jpeg?v=1783397807&w=1920&h=1080",
+            "publishedAt": "2026-07-07T11:00:01Z",
+            "content": "A version of this article appeared in the CNBC Property Play newsletter with Diana Olick. Property Play covers new and evolving opportunities for the real estate investor, from individuals to venture… [+4940 chars]"
+        },
+        {
+            "source": {
+                "id": "associated-press",
+                "name": "Associated Press"
+            },
+            "author": "Schuyler Dixon",
+            "title": "Merino’s late goal sends Spain to quarterfinals and ends Ronaldo’s World Cup career - AP News",
+            "description": "Mikel Merino scored in the first minute of second-half stoppage time, and Spain beat Portugal 1-0 to end the World Cup career of superstar Cristiano Ronaldo. Merino had just been knocked down, and a foul was called. While a Portugal player argued, Merino play…",
+            "url": "https://apnews.com/article/world-cup-portugal-spain-score-38ab465c7d5734bb504d3e44292d5a6a",
+            "urlToImage": "https://dims.apnews.com/dims4/default/6a31ab3/2147483647/strip/true/crop/4917x3276+0+1/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F91%2F7a%2F4e92df18d6b2ab764b63b3fe4e88%2F79a390cd795a4cc9905c71d4d6444529",
+            "publishedAt": "2026-07-07T10:49:00Z",
+            "content": "ARLINGTON, Texas (AP) Mikel Merino was still on the bench in the final minutes of regulation, with Spain coach Luis de la Fuente worried about hanging on to his substitutes as long as possible becaus… [+4446 chars]"
+        },
+        {
+            "source": {
+                "id": "axios",
+                "name": "Axios"
+            },
+            "author": "Hans Nichols, Holly Otterbein",
+            "title": "Schumer joins calls for Platner's withdrawal as Dem support collapses - Axios",
+            "description": "Chuck Schumer's fears about nominating an untested and largely unvetted candidate to take on Collins are playing out in real time.",
+            "url": "https://www.axios.com/2026/07/06/graham-platner-maine-senate-democrats",
+            "urlToImage": "https://images.axios.com/m6r2VFeUBlgdAvH50Eu0WokzOv4=/0x0:4000x2250/1366x768/2026/07/06/1783377202860.jpeg",
+            "publishedAt": "2026-07-07T10:45:34Z",
+            "content": "<ul><li>Schumer and his fellow New York Democrat, Sen. Kirsten Gillibrand, joined a growing list of state and national Democrats urging Platner to drop out. But only Platner can make that decision. <… [+3007 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Digitalfoundry.net"
+            },
+            "author": "Digital Foundry",
+            "title": "Xbox Layoffs Announced: 1600 Now, 1600 More into 2028, Four Studios Leave and id Software Reportedly Gutted - Digital Foundry",
+            "description": "\"History is full of companies that mistake longevity for inevitability. We will not be one of them.\"",
+            "url": "https://www.digitalfoundry.net/news/2026/07/xbox-layoffs-announced-1600-now-1600-more-into-2028-four-studios-leave-and-id-software-reportedly-gutted",
+            "urlToImage": "https://images.digitalfoundry.net/b980cc2b7c66e/large.jpg",
+            "publishedAt": "2026-07-07T10:40:00Z",
+            "content": "Microsoft has announced that thousands of Xbox employees have lost their jobs today, as part of wider cuts across Microsoft in a bid to make the business \"healthy\". In a memo attributed to Xbox CEO A… [+4534 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "CNBC"
+            },
+            "author": "Sam Meredith",
+            "title": "Ukrainian drones hit Russia’s largest oil refinery as Zelenskyy says Siberia now ‘within reach’ - CNBC",
+            "description": "The attack underscores Kyiv's enhanced long-range drone capabilities and comes on the eve of a crucial NATO summit.",
+            "url": "https://www.cnbc.com/2026/07/07/ukraine-russia-omsk-oil-refinery-putin-nato.html",
+            "urlToImage": "https://image.cnbcfm.com/api/v1/image/108331357-1783425453250-2026-07-06T210426Z_315673476_RC2D8MAX7496_RTRMADP_3_UKRAINE-CRISIS-RUSSIA-DRONES-OMSK.JPG?v=1783425524&w=1920&h=1080",
+            "publishedAt": "2026-07-07T10:13:57Z",
+            "content": "Ukrainian drones struck a major oil refinery in the city of Omsk in western Siberia, in what appears to be one of Kyiv's deepest attacks on Russian territory since the full-scale invasion of Ukraine.… [+2542 chars]"
+        },
+        {
+            "source": {
+                "id": "cbs-news",
+                "name": "CBS News"
+            },
+            "author": "Jacob  Rosen",
+            "title": "Top Senate Democrats push Trump-affiliated companies for answers about IRS settlement - CBS News",
+            "description": "Democratic Sens. Elizabeth Warren, Chuck Schumer and Ron Wyden are probing whether companies affiliated with the Trump family are included in a DOJ deal to resolve a lawsuit brought by President Trump.",
+            "url": "https://www.cbsnews.com/news/senate-democrats-push-trump-affiliated-companies-irs-settlement/",
+            "urlToImage": "https://assets3.cbsnewsstatic.com/hub/i/r/2026/07/07/7344b9a6-091d-4be5-b95a-69831f371581/thumbnail/1200x630g3/e7a660f110c7494fa6fcbcd769a57c32/gettyimages-2284348684.jpg",
+            "publishedAt": "2026-07-07T10:00:15Z",
+            "content": "Top Senate Democrats are pushing for answers on whether a provision in a controversial settlement agreement between President Trump and his own administration applies to companies co-founded by or af… [+4339 chars]"
+        },
+        {
+            "source": {
+                "id": "cbs-news",
+                "name": "CBS News"
+            },
+            "author": null,
+            "title": "Toyota investing $3.6 billion in Texas plant, moving most Tacoma pickup production from Mexico - CBS News",
+            "description": "Toyota says it's shifting most production of its mid-size Tacoma pickup truck from Mexico to the United States as part of a $3.6 billion investment in its San Antonio, Texas, plant.",
+            "url": "https://www.cbsnews.com/news/toyota-3-6-billion-texas-plant-san-antonio-tacoma-pickup-production-from-mexico/",
+            "urlToImage": "https://assets1.cbsnewsstatic.com/hub/i/r/2026/07/07/152978b5-7dcd-422f-93bb-58a2514d75b0/thumbnail/1200x630/fe7de335560cec6f92a1a888298d8c22/2026-07-06t202650z-1119083521-rc2k8maaotz2-rtrmadp-3-toyota-usa.jpg",
+            "publishedAt": "2026-07-07T09:20:00Z",
+            "content": "Toyota said Monday it will shift most production of its mid-size Tacoma pickup truck from Mexico to the United States as part of a $3.6 billion investment in its San Antonio, Texas, plant. The transi… [+1944 chars]"
+        },
+        {
+            "source": {
+                "id": "associated-press",
+                "name": "Associated Press"
+            },
+            "author": "Huizhong Wu",
+            "title": "What to know about China’s rare ballistic missile test and why it raises concerns - AP News",
+            "description": "China's navy has test-launched a long-range ballistic missile from a nuclear-powered submarine, showcasing its growing nuclear deterrence capabilities. The launch Monday has drawn protests from the U.S. as well as countries in Asia and the Pacific. Experts sa…",
+            "url": "https://apnews.com/article/china-missile-test-pacific-what-to-know-28df0be8121a5af6e7f281c738c06ba3",
+            "urlToImage": "https://dims.apnews.com/dims4/default/ae11f94/2147483647/strip/true/crop/2343x1561+0+0/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fdf%2F5f%2F6c914377f23a62dbb429deeda3ea%2F36a6457ddc3d4139904ebe6880e4c6b3",
+            "publishedAt": "2026-07-07T09:12:00Z",
+            "content": "BANGKOK (AP) Chinas navy test-launched a long-range ballistic missile Monday from a nuclear-powered submarine a move that experts said showed Beijings increasing skill and capability as part of its n… [+5716 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "NPR"
+            },
+            "author": "Fatma Tanis",
+            "title": "Trump’s NATO pressure campaign continues as summit begins - NPR",
+            "description": "President Trump's arrival in Ankara kicks off another potentially tense meeting for NATO.",
+            "url": "https://www.npr.org/2026/07/07/nx-s1-5884055/trumps-nato-pressure-campaign-continues-as-summit-begins",
+            "urlToImage": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5616x3159+0+293/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fdc%2F3e%2F99e2cb514a6f8a3cd99fa72edd5d%2Fgettyimages-2282641281.jpg",
+            "publishedAt": "2026-07-07T09:00:00Z",
+            "content": "Just days before his arrival in Turkey for the annual NATO summit, President Trump made it clear that in his mind, he and the world's largest defense alliance are not on good terms.\r\n\"The United Stat… [+8245 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "TMZ"
+            },
+            "author": "TMZ Staff",
+            "title": "Nipsey Hussle Kids Receive Inheritance From Estate Worth Millions - TMZ",
+            "description": "Nipsey Hussle’s children finally received their cut of the late rapper’s estate ... TMZ has learned.",
+            "url": "https://www.tmz.com/2026/07/07/nipsey-hussle-kids-receive-share-from-estate/",
+            "urlToImage": "https://imagez.tmz.com/image/b4/16by9/2026/07/06/b4e99a514be14b3aad021e6288444e85_xl.png",
+            "publishedAt": "2026-07-07T08:00:07Z",
+            "content": "Nipsey Hussles children finally received their cut of the late rappers estate ... TMZ has learned.\r\nPer court docs obtained by TMZ, Nipseys children, 17-year-old Emani and 9-year-old Kross, have been… [+759 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "GamesIndustry.biz"
+            },
+            "author": "Sophie McEvoy",
+            "title": "Original Switch console lineup to be discontinued in Europe by mid-February 2027 - GamesIndustry.biz",
+            "description": "To comply with replaceable battery legislation, Nintendo will begin rolling out revised Switch 2 models this summer",
+            "url": "https://www.gamesindustry.biz/original-switch-console-lineup-to-be-discontinued-in-europe-by-mid-february-2027",
+            "urlToImage": "https://assetsio.gnwcdn.com/switch-console-jesper-brouwers-unsplash.jpg?width=1200&height=630&fit=crop&enable=upscale&auto=webp",
+            "publishedAt": "2026-07-07T07:59:59Z",
+            "content": "Nintendo will discontinue sales of the original Switch lineup in Europe from mid-February 2027, as required by EU legislation on accessible consumer hardware batteries.\r\nFrom this date, the Switch, S… [+1271 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "FRANCE 24 English"
+            },
+            "author": "FRANCE 24",
+            "title": "Explosions rock Damascus on second day of Macron's visit to Syria - France 24",
+            "description": "Explosions ⁠wounded at least 18 people ​in ​Damascus on ​Tuesday as French President Emmanuel Macron visited the Syrian capital, with witnesses reporting smoke rising near a high-end hotel where the leader spent the night. It was the second attack to rock Dam…",
+            "url": "https://www.france24.com/en/middle-east/20260707-explosions-heard-in-damascus-during-french-president-macron-s-visit",
+            "urlToImage": "https://s.france24.com/media/display/76ac4e8e-79d9-11f1-9515-005056bf30b7/w:1280/p:16x9/2026-07-07T075111Z-119825787-RC2V8MAWK2WB-RTRMADP-3-SYRIA-POLITICS-FRANCE.jpg",
+            "publishedAt": "2026-07-07T07:35:59Z",
+            "content": "Explosions rocked Syria 's capital on Tuesday as Frances president met with his counterpart in a landmark visit, with at least 18 people wounded, Syria's Interior Ministry said.\r\nIt was the second at… [+4266 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Space.com"
+            },
+            "author": "Mike Wall",
+            "title": "SpaceX launches 81 satellites to orbit from California, lands rocket on ship at sea - Space",
+            "description": "The Transporter-17 rideshare mission lifted off at 3:12 a.m. ET on Tuesday (July 7).",
+            "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-falcon-9-transporter-17-rideshare-launch-81-satellites",
+            "urlToImage": "https://cdn.mos.cms.futurecdn.net/txwMBEKFJSyAiDh9ppz9ng-2560-80.jpg",
+            "publishedAt": "2026-07-07T07:28:32Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": null,
+            "title": "France's Marine Le Pen, who brought hard-right National Rally to cusp of electoral success - BBC",
+            "description": "She has tasted defeat before, but if the appeal court bars her from running in the 2027 presidential election, it could end her political career.",
+            "url": "https://www.bbc.com/news/articles/cdejj03j9ejo",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/efd1/live/14ab1350-7970-11f1-9290-9b15d0e76459.jpg",
+            "publishedAt": "2026-07-07T06:35:00Z",
+            "content": "Le Pen, 57, told supporters at the weekend in Liévin, in the heart of her constituency in the Pas-de-Calais, that \"if the judiciary bars me from running for the presidency\", she would instead devote … [+58 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Entertainment Weekly"
+            },
+            "author": "https://www.facebook.com/entertainmentweekly",
+            "title": "‘The Odyssey’ first reactions: Raves for Christopher Nolan’s ‘jaw-dropping,’ ‘staggering,’ ‘must-see’ epic - Entertainment Weekly",
+            "description": "First reactions to Christopher Nolan’s ‘The Odyssey’ deem the epic adventure ‘jaw-dropping,’ ‘staggering,’ and ‘the must-see cinematic event of the summer — and quite possibly the year.’",
+            "url": "https://ew.com/the-odyssey-first-reactions-raves-for-christopher-nolan-must-see-epic-12013163",
+            "urlToImage": "https://ew.com/thmb/MAMtbWp1b37CC3z7bHoMsoeoe20=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Matt-Damon-Zendaya-THE-ODYSSEY-050426-6c6207657404494caf47c96c4e8f51e6.jpg",
+            "publishedAt": "2026-07-07T05:04:22Z",
+            "content": "Has Christopher Nolan bested himself with The Odyssey? Those who have seen his 13th feature film enthusiastically agree.\r\nThe action-fantasy blockbuster, an adaptation of Homers epic poem, stars Matt… [+2574 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Just Jared"
+            },
+            "author": "David Niederhoffer",
+            "title": "Simone Biles Responds to Questions About Why She Attended Taylor Swift's Wedding: Friendship Timeline Revealed - Just Jared",
+            "description": "Simone Biles is responding to people who don't think she's actually friends with Taylor Swift. After Simone shared photos of herself and husband Jonathan",
+            "url": "https://www.justjared.com/2026/07/07/simone-biles-responds-to-questions-about-why-she-attended-taylor-swifts-wedding-friendship-timeline-revealed/",
+            "urlToImage": "https://www.justjared.com/wp-content/uploads/2026/07/simone-biles-taylor-swift-friendship.jpg",
+            "publishedAt": "2026-07-07T04:08:25Z",
+            "content": "Credit: Getty\r\nSimone Biles is responding to people who don’t think she’s actually friends with Taylor Swift. \r\nAfter Simoneshared photos of herself and husband Jonathan Owens all dressed up for the … [+2268 chars]"
+        }
+    ]
+  constructor() {
+    super();
+    this.state = {
+      articeles :this.articles,
+      loading : false
+    }
   }
 
   render() {
@@ -13,15 +265,12 @@ export class News extends Component {
         <div className="container my-4">
             <h2>NewsApp - Top Headlines</h2>
             <div className="row my-4" >
-                <div className="col-md-4">
-                    <Newsitem/>
+              {this.state.articeles.map((element)=>{
+                return <div className="col-md-4" key={element.url}>
+                  <Newsitem title={element.title?element.title.slice(0,45):""} description={element.description?element.description.slice(0,88):""} imageUrl ={element.urlToImage} newsUrl={element.url}/>
                 </div>
-                <div className="col-md-4">
-                    <Newsitem/>
-                </div>
-                <div className="col-md-4">
-                    <Newsitem/>
-                </div>
+              }
+              )}
             </div>
 
         </div>
