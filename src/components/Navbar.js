@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export class Navbar extends Component {
   static propTypes = {};
@@ -26,20 +27,18 @@ export class Navbar extends Component {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">
+                  <Link className="nav-link active" aria-current="page" to="/">
                     Home
-                  </a>
+                  </Link>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/Features">
-                    Features
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/About">
-                    About
-                  </a>
-                </li>
+                <li className="nav-item"><Link className="nav-link" to="/Business"> Business </Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/Entertainment"> Entertainment </Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/General"> General </Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/Health"> Health </Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/Science"> Science </Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/Sports"> Sports</Link></li> 
+                 <li className="nav-item"><Link className="nav-link" to="/Technology"> Technology </Link></li>
+                
               </ul>
             </div>
           </div>
