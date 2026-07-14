@@ -49,7 +49,7 @@ const News = (props) => {
     return (
       <div>
         <div className="container my-4">
-          <h2 className="text-center" style={{ margin: "40px 0px" }}>
+          <h2 className="text-center" style={{ margin: "40px 0px" , marginTop:"90px"}}>
             NewsApp - {capatalizeFirstLetter(props.category)} Top
             Headlines
           </h2>
@@ -62,7 +62,7 @@ const News = (props) => {
             loader={<Spinner/>}
             >
             <div className="container">
-            <div className="row my-4">
+            <div className="row my-2">
               {articles.map((element) => {
                 return (
                   <div className="col-md-4 my-2" key={element.url}>
